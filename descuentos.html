@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Porcentajes y descuentos | Curso Práctico de JavaScript en Platzi</title>
+    </head>
+    <body>
+        <header>
+            <h1>Porcentajes y descuentos</h1>
+            <p>Este es el segundo taller del Curso Practico de JavaScript</p>
+        </header>
+
+        <section>
+                <h2>Calcula el precio a pagar de tus productos con descuentos</h2>
+
+                <form action="">
+
+                    <label for="inputPrice">Escribe el precio de tu producto:</label>
+                    <input type="number" name="inputPrice" id="inputPrice">
+
+                    <label for="inputDiscount">Escribe el descuento de tu producto:</label>
+                    <input type="number" min="1" max="100" name="inputDiscount" id="inputDiscount">
+
+                    <button type="button" onclick="calculatePriceDiscount()">Calcular el precio con descuento</button>
+
+                    <p id="resultPrice"></p>
+
+                </form>
+        </section>
+        
+        <section>
+            <h2>Calcula el precio a pagar de tus productos con cupones de descuentos</h2>
+
+            <form action="">
+
+                <label for="inputPrice2">Escribe el precio de tu producto:</label>
+                <input type="number" name="inputPrice2" id="inputPrice2">
+
+                <label for="inputCupon">Ingresa el cupón de descuento de tu producto:</label>
+                <input type="text" name="inputCupon" id="inputCupon" list="cupones" min="1" max="3">
+                <datalist id="cupones">
+                    <option value="1">Cupón 1</option>
+                    <option value="2">Cupón 2</option>
+                    <option value="3">Cupón 3</option>
+                </datalist>
+
+                <button type="button" onclick="calculatePriceDiscountCupon()">Calcular el precio con descuento</button>
+
+                <p id="resultPriceCupon"></p>
+
+            </form>
+        </section>
+
+
+
+        <script src="./descuentos.js"></script>
+    </body>
+</html>
